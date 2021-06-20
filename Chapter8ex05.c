@@ -1,3 +1,14 @@
+/********************************************************
+ * Ex03 -- Upload time. *
+ * Not an especially earth-shattering program. *
+ * *
+ * Author: Israel Prado. *
+ * *
+ * Purpose: the use of some functions. *
+ * *
+ * Usage: *
+ * put a value in bytes and it will show the upload time in hours and days. *
+ ********************************************************/
 #include <stdio.h>
 int main(void) {
 
