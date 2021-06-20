@@ -1,5 +1,5 @@
 /********************************************************
- * Ex01 -- redondeo. *
+ * Ex04 -- redondeo. *
  * Not an especially earth-shattering program. *
  * *
  * Author: Israel Prado. *
