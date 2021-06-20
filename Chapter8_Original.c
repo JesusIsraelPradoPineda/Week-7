@@ -1,3 +1,15 @@
+  
+/********************************************************
+ * Original -- Quizz. *
+ * Not an especially earth-shattering program. *
+ * *
+ * Author: Israel Prado. *
+ * *
+ * Purpose: conocer el conocimiento de la persona del for. *
+ * *
+ * Usage: *
+ * simplemente es seguir las instrucciones que te va indicando el programa. *
+ ********************************************************/
 #include <stdio.h>
 
 int main(void) {
@@ -8,16 +20,16 @@ int main(void) {
   printf("\n");
   int i;
   for (i=b;i>=0;i--){
-    printf("%d\n",i);
+    printf("%d\n",i); //Doy retro del for y pongo un ejemplo de como se aplica este y su condicion mas importante
   }
   printf("si quieres que sea de menor a mayor es (i=0;i<=b;i++), dame un numero para mostrartelo\n");
   scanf("%d",&b);
    printf("\n");
   for (i=0;i<=b;i++){
-    printf("%d\n",i);
+    printf("%d\n",i); //se hace la cuenta reversiva
   }
   printf("i=algun numero o variable es en donde inicias, la i<= algun numero significa en donde quiero terminar, y i++ o -- es para subir o bajar la condicion (pulsa cualquier tecla para continuar)\n");
-  scanf("%f",&trash);
+  scanf("%f",&trash); //solo quuiero avanzar, no me importa la variable de trash
   printf("\n");
   printf("vamos a ver que tanto aprendiste, tienes 2 intentos\n");
 int n = 0;
@@ -31,7 +43,7 @@ int n = 0;
   for (i=0;i<2;i++){
     scanf("%d",&Q);
     if (Q == 3) {printf("correcto\n");
-    n=n+1;
+    n=n+1; //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
     break;}
     else if (i==0){printf("intenta de nuevo\n");}
     else if (i==1){printf("incorrecto\n");
@@ -41,16 +53,16 @@ int n = 0;
   printf("si yo quiero hacer una cuenta regresiva, donde debo iniciar y debo terminar la variable?(tienes incisos, selecciona el correcto del 1 al 5\n");
   printf("1.- la inicializacion en el primer bloque es la variable propuesta asi como en el segundo bloque se pondra esa variable\n");
   printf("2.- la inicializacion en el primer bloque es la variable propuesta, en el segundo bloque se pone el numero a donde quiero llegar \n");
-  printf("3.- Ambos bloques deben llevar numero, aun que pida un numero, siempre iran numeros \n");
-  printf("4.- No se puede debido a que esta funcion no realiza estas funciones\n");
+  printf("3.- Ambos bloques deben llevar numero, aun que pida una variable, siempre iran numeros \n");
+  printf("4.- No se puede debido a que esta funcion no puede realizar estas funciones\n");
   printf("5.- Se puede de la manera 1,2 y 3 anteriormente propuesta \n");
 
   for (i=0;i<2;i++){
     scanf("%d",&Q);
     if (Q == 2) {printf("correcto\n");
     n=n+1;
-    break;}
-    else if (i==0){printf("intenta de nuevo\n");}
+    break;} //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
+    else if (i==0){printf("intenta de nuevo\n");} 
     else if (i==1){printf("incorrecto\n");
     printf("la respuesta es 2.- la inicializacion en el primer bloque es la variable propuesta, en el segundo bloque se pone el numero a donde quiero llegar \n");}
   }
@@ -62,7 +74,7 @@ int n = 0;
     scanf("%d",&Q);
     if (Q == 1) {printf("correcto\n");
     n=n+1;
-    break;}
+    break;} //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
     else if (i==0){printf("incorrecto\n");
     printf("la respuesta es 1.- Verdadero \n");}
   }
@@ -77,13 +89,13 @@ int n = 0;
     scanf("%d",&Q);
     if (Q == 5) {printf("correcto\n");
     n=n+1;
-    break;}
+    break;} //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
     else if (i==0){printf("intenta de nuevo \n");}
     else if (i==1){printf("intenta de nuevo \n");
     printf("la respuesta es 5.- quiero imprimir los numeros que quiera, pero cuando un numero sea multiplo de 3, escriba Buzz\n");}
   }
   printf("\n");
-printf("tu resultado fue %d de 4",n);
+printf("tu resultado fue %d de 4",n); //te doy tu puntuacion final
 
   return 0;
 }
