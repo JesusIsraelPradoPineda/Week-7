@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-  int x,a,b,c,d,e,f,g,h,i,j,k,en=31,feb=28,mar=31,ab=30,mayo=31,junio=30,Julio=31,ago=31,sep=30,oct=31,nov=30,dic=31,n=0,m=0,res,v1,v2;
+  int x,a,b,c,d,e,f,g,h,i,j,k,en=31,feb=28,mar=31,ab=30,mayo=31,junio=30,Julio=31,ago=31,sep=30,oct=31,nov=30,dic=31,n=0,m=0,res,v1,v2; //se incluyen todas las variables a trabajar
   printf("dame la fecha con el formato DD MM AAAA\n");
   scanf("%d",&x);
   scanf("%d",&a);
@@ -10,19 +10,19 @@ int main(void) {
   scanf("%d",&c);
   scanf("%d",&d);
   scanf("%d",&e);
-  printf ("Tu pusiste %d/%d/%d y %d/%d/%d\n",x,a,b,c,d,e);
-  if (a<=12&&d<=12){
+  printf ("Tu pusiste %d/%d/%d y %d/%d/%d\n",x,a,b,c,d,e); //pido datos y luego muestro en pantalla los mismos
+  if (a<=12&&d<=12){ //no tenemos 13 meses, si pones 13 meses no sera valido
     switch(a){
       case 1:
       printf("mes de Enero\n");
       if (x<=31){
-        x=31-x+feb+mar+ab+mayo+junio+Julio+ago+sep+oct+nov+dic;
-        n=n+1;
+        x=31-x+feb+mar+ab+mayo+junio+Julio+ago+sep+oct+nov+dic; //para saber cuantos dias falta que a partir del dia n del mes n, se acabe el año, se realizan esta cadena de operacoiones
+        n=n+1; //funcion boleto:si se cumple la condicion, tienes el boleto para entrar a la siguiente parte
       }
       else {
-        printf("no valido debido a que enero no tiene %d dias\n",x);
+        printf("no valido debido a que enero no tiene %d dias\n",x);//si al inicio del programa metiste mas dias del que contiene n mes, te dira que no es valido(aplica en todos)
       }
-      break;
+      break; //aplica todo en la misma
       case 2:
       printf("mes de febrero\n");
             if (x<=28){
@@ -255,13 +255,13 @@ int main(void) {
       }
       break;
     }
-if (n==1 && m==1){
-v1=((e-b)*365);
-v2=(x-c);
-res= v1+v2;
-    if(b-e<0){
-printf("la distancia en dias entre las 2 fechas es de %d dias\n",res); }
-  else{printf("la distancia en dias entre las 2 fechas es de %d dias\n",res);}
+if (n==1 && m==1){ //si tienes el boleto de n y de m juntos , se realiza las operaciones, de lo contrario no se podra
+v1=((e-b)*365); //multiplicas al año por 365
+v2=(x-c); //para saber los dias entre dos fechas de un mismo año, se restan 
+res= v1+v2; //el resultado final se define como la suma de tus años dias mas tus dias normales
+    if(res<0){  //si el resultado es un numero negativo
+printf("la distancia en dias entre las 2 fechas es de %d dias\n",res*-1); } //solamente lo multiplicamos por -1 para tener dias positivos
+  else{printf("la distancia en dias entre las 2 fechas es de %d dias\n",res);} //solo imprime el resultado
   }
   }
   
