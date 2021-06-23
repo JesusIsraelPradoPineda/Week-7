@@ -16,12 +16,15 @@ int main(void) {
   float num;
   float res = 0;
   float resfin; //I have the variables
+  char at[1000];
   printf("cuantos numeros vamos a promediar?\n");
-  scanf("%d",&xd);
+   fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&xd);
   for (i = 1; i<=xd;i++){ //I get in a for then i asked how much numbers do we need
     printf("\n");
     printf("dame numero %d \n",i);
-    scanf("%f",&num);
+    fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f&num);
     res=res+num; //I ask the numbers
     if (i==xd){ 
       break;
