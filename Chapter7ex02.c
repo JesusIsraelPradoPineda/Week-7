@@ -1,15 +1,25 @@
+/********************************************************
+ * Ex02 -- Fechas. *
+ * Not an especially earth-shattering program. *
+ * *
+ * Author: Israel Prado. *
+ * *
+ * Purpose: Hacer uso de los comandos y la logica para hacer que funcione el programa. *
+ * *
+ * Usage: *
+ * Put the date and you''ll get the distance in days. *
+ ********************************************************/
 #include <stdio.h>
 
 int main(void) {
   int x,a,b,c,d,e,f,g,h,i,j,k,en=31,feb=28,mar=31,ab=30,mayo=31,junio=30,Julio=31,ago=31,sep=30,oct=31,nov=30,dic=31,n=0,m=0,res,v1,v2; //se incluyen todas las variables a trabajar
+  char at[1000];
   printf("dame la fecha con el formato DD MM AAAA\n");
-  scanf("%d",&x);
-  scanf("%d",&a);
-  scanf("%d",&b);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d %d %d",&x,&a,&b);
   printf("dame la otra fecha con el mismo formato \n");
-  scanf("%d",&c);
-  scanf("%d",&d);
-  scanf("%d",&e);
+   fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d %d %d",&c,&d,&e);
   printf ("Tu pusiste %d/%d/%d y %d/%d/%d\n",x,a,b,c,d,e); //pido datos y luego muestro en pantalla los mismos
   if (a<=12&&d<=12){ //no tenemos 13 meses, si pones 13 meses no sera valido
     switch(a){
