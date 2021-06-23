@@ -6,12 +6,15 @@ int main(void) {
   int n = 0;
   int p = 0;
   int o = 0;
+  char at[1000];
   printf("cuantos numeros imprimimos?\n");
-  scanf("%d",&a);
+ fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&a);
   for (int i=1;i<=a;i++)
   {
   printf("dame numeros\n");
-  scanf("%d",&b);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&b);
   if(b < 0){
     n=n+1;
   }
