@@ -16,12 +16,14 @@
 #include <math.h> 
 #include <string.h> // string handling operations
 #define MAX 1000
+char at[1000];
 
 int main(void) {
   int a1 ; //I defined the variable type integer because we do not have fraction years :(
 
   printf("what year do you want know?\n"); //I ask the year to analizate
-  scanf("%d",&a1);  // read from prompt
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f",&a1);
   if (a1 % 400 == 0){ //If it is a multiple of 400, it will be 
     printf ("%d",a1);
     printf (" is the year and therefore is bisiesto");
