@@ -18,12 +18,15 @@ int main(void) {
   int c;
   int cp;
   int i; //I defined here the variables
+  char at[1000];
   printf ("ingresa alguna contraseña de n caracteres\n");
   scanf("%d",&c); //I asked the new password in order to commit it
-
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&c);
   for (i=0;i<=2;i++){
       printf ("registra la contraseña\n"); 
-  scanf("%d",&cp); //I ask the password
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&cp); //I ask the password
   if (cp == c){
     //pinA0 == High;
     //delay (200ms);
