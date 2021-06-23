@@ -1,9 +1,10 @@
 #include <stdio.h>
-
+char at[1000];
 int main(void) {
   int x,a,b,c,d,e,f,g,h,i,j,k;
   printf("put the number guy (SOLO LLEGA AL 999,999)\n");
-  scanf("%d",&x);
+   fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&x);
   a=(x-x/10*10);
   b=(x-x/100*100-a)/10;
   c=(x-x/1000*1000-a-b)/100;
