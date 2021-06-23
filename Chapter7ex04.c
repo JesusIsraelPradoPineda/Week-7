@@ -11,12 +11,13 @@
  ********************************************************/
 #include <stdio.h>
 #include <math.h>
-
+char at[1000];
 int main(void) {
   float sell; //esta variable es la que se va a guardar
   float res; //esta es la variable de impuesto
   printf("cuanto vendiste el dia de hoy?\n");//ingresa y registra la variable
-  scanf("%f",&sell);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f",&sell);
   res= (sell*5)/100;//se realiza la operacion para poder definir el impuesto
   printf("you need to pay %0.2f of tax due you won %0.2f aprox\n",res,sell);//muestro los resultados redondeados a dos decimas
   return 0;
