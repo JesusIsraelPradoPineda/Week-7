@@ -16,12 +16,15 @@ int main(void) {
   float num;
   float res = 0;
   float resfin; //defino todas las variables a utilizar
+  char at[1000];
   printf("cuantas resistencias necesitas sumar\n");
-  scanf("%d",&xd); //pido el numero de resistencias para sacar el paralelo
+ fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&xd); //pido el numero de resistencias para sacar el paralelo
   for (i = 1; i<=xd;i++){
     printf("\n"); 
     printf("dame resistencia %d \n",i);  
-    scanf("%f",&num);
+     fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&num); 
     res=res+(1/num); 
     if (i==xd){ //cuando se iguale la I, nos salimos para poner el mensaje final
       break;
