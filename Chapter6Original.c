@@ -15,7 +15,7 @@
 //include<keyboard.h>
 #define K = 900000000;
 char at[1000];
-chat at2[1000];
+char at2[1000];
 int main(void) {
   int Eleccion;
   int num = Eleccion;
@@ -29,7 +29,7 @@ int main(void) {
   printf ("\n");
   printf ("pulsa 1 si tienes fuerza o pulsa 2 si tienes distancia\n"); //doy un poco de retroalimentacion y meto el menu para elegir segun lo que tengas
   fgets(at, sizeof(at), stdin);
-  sscanf(at,"%f",&Eleccion);
+  sscanf(at,"%d",&Eleccion);
   switch (Eleccion) {
   case 1: 
       
