@@ -5,7 +5,8 @@ char at[100];
 int main(void) {
   float x1;
   printf("give me the amount of money (the max amount should be 1.00, else you won't get a result) \n");
-  scanf("%f",&x1);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f",&x1);
   if (x1 > 1)
   {
     printf("input not valid \n");
