@@ -13,10 +13,13 @@
 int main(void) {
   int xd;
   int abajo;
+  char at[1000];
   printf("cuantos quieres ver rey para la derecha\n");
-  scanf("%d",&xd);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f %f",&xd);
   printf("y a pa abajo? \n");
-  scanf("%d",&abajo); //pido las dimensiones de este cuadrado
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f %f",&abajo); //pido las dimensiones de este cuadrado
   for (int e=0 ; e <abajo; e++){ //antes de poner aabajo, los pondre a la derecha
   for (int i=0 ; i <xd;i++){ 
   printf("+-----");
