@@ -11,25 +11,28 @@
  * simplemente es seguir las instrucciones que te va indicando el programa. *
  ********************************************************/
 #include <stdio.h>
+char at[1000];
 
 int main(void) {
   int b;
   float trash;
   printf("este es un resumen de for, si queremos leer numeros de Mayor a menor se debe poner for (i=b;i>=0;i--) , dame un numero para mostrartelo\n");
-  scanf("%d",&b);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&b);
   printf("\n");
   int i;
   for (i=b;i>=0;i--){
     printf("%d\n",i); //Doy retro del for y pongo un ejemplo de como se aplica este y su condicion mas importante
   }
   printf("si quieres que sea de menor a mayor es (i=0;i<=b;i++), dame un numero para mostrartelo\n");
-  scanf("%d",&b);
-   printf("\n");
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&b);
   for (i=0;i<=b;i++){
     printf("%d\n",i); //se hace la cuenta reversiva
   }
   printf("i=algun numero o variable es en donde inicias, la i<= algun numero significa en donde quiero terminar, y i++ o -- es para subir o bajar la condicion (pulsa cualquier tecla para continuar)\n");
-  scanf("%f",&trash); //solo quuiero avanzar, no me importa la variable de trash
+   fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&trash); //solo quuiero avanzar, no me importa la variable de trash
   printf("\n");
   printf("vamos a ver que tanto aprendiste, tienes 2 intentos\n");
 int n = 0;
@@ -41,7 +44,8 @@ int n = 0;
   printf("5.- ninguna es correcta\n");
   int Q;
   for (i=0;i<2;i++){
-    scanf("%d",&Q);
+     fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&Q);
     if (Q == 3) {printf("correcto\n");
     n=n+1; //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
     break;}
@@ -58,7 +62,8 @@ int n = 0;
   printf("5.- Se puede de la manera 1,2 y 3 anteriormente propuesta \n");
 
   for (i=0;i<2;i++){
-    scanf("%d",&Q);
+         fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&Q);scanf("%d",&Q);
     if (Q == 2) {printf("correcto\n");
     n=n+1;
     break;} //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
@@ -71,7 +76,8 @@ int n = 0;
   printf("1.- Verdadero\n");
   printf("2.- Falso \n");
   for (i=0;i<2;i++){
-    scanf("%d",&Q);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&Q);
     if (Q == 1) {printf("correcto\n");
     n=n+1;
     break;} //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
@@ -86,7 +92,8 @@ int n = 0;
   printf("4.- Tengo una tarea de resistencias en serie, y para conseguir la resistencia total, debo sumar todas las resistencias existentes en el circuito, pero no quiero pensar, ya quiero irme a jugar \n");
   printf("5.- quiero imprimir los numeros que quiera, pero cuando un numero sea multiplo de 3, escriba Buzz\n");
   for (i=0;i<2;i++){
-    scanf("%d",&Q);
+   fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&Q);
     if (Q == 5) {printf("correcto\n");
     n=n+1;
     break;} //se realiza una pregunta con 2 oportunidades la cual, si aciertas se te agrega un punto a puntaje final, de lo contrario, no sera asi
