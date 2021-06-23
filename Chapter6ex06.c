@@ -6,7 +6,8 @@ int main(void) {
   float x1;
   float extra;
   printf("give the hours worked \n");
-  scanf("%f",&x1);
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f",&x1);
   if (x1 > 40)
   {
     extra = x1-40;
