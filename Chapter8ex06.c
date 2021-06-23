@@ -13,8 +13,11 @@
 
 int main(void) {
   int x,a,b,c,d,e,f,g,h,i,j,k;
+  char at[1000];
   printf("put the number guy\n");
-  scanf("%d",&x);
+  
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&x);
   a=(x-x/10*10);
   b=(x-x/100*100-a)/10;
   c=(x-x/1000*1000-a-b)/100;
