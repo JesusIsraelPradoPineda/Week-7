@@ -32,7 +32,7 @@ int main(void) {
   }
   printf("i=algun numero o variable es en donde inicias, la i<= algun numero significa en donde quiero terminar, y i++ o -- es para subir o bajar la condicion (pulsa cualquier tecla para continuar)\n");
    fgets(at, sizeof(at), stdin);
-  sscanf(at,"%d",&trash); //solo quuiero avanzar, no me importa la variable de trash
+  sscanf(at,"%f",&trash); //solo quuiero avanzar, no me importa la variable de trash
   printf("\n");
   printf("vamos a ver que tanto aprendiste, tienes 2 intentos\n");
 int n = 0;
