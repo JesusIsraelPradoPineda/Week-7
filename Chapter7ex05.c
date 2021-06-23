@@ -10,11 +10,13 @@
  * ingresa el numero y el programa te dira si es o no. */
 #include <stdio.h>
 int verdad(int xd); //se definen las variables de entrada y salida
-
+char at[1000];
 int main(void) {
+  
   int xd; //defino la variable numero
   printf("Dime un número: \n"); //pido el numero y se guarda
-  scanf("%d", &xd); 
+  fgets(at, sizeof(at), stdin);
+  sscanf(at,"%d",&xd); 
   if (verdad(xd)) {
     printf("Es primo"); //se define como primo a numero que solo se puede dividir entre 1 y 0 sin dejar decimales
   } else {
