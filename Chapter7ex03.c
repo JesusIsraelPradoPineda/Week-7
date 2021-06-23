@@ -14,8 +14,10 @@ int main(void) {
   float x1; //este pide un valor para ser ingresado
   float res; //se realiza la operacion para saber las horas
   float res2; //se realiza la opracion para saber los dias 
+  char at[1000];
   printf("dame el valor de peso de tu archivo a subir en bytes\n"); //pido los valores necesarios
-  scanf("%f",&x1); //lo guardo en variable x1
+ fgets(at, sizeof(at), stdin);
+  sscanf(at,"%f",&x1);
   res = (x1*1)/34560000; //se resuelve la operacion y se guarda en la variable res
   printf("el tiempo que tardara en subir el archivo es de %f horas \n",res); //imprimo el resultado
     res2 = res/24; //para saber dias solo hago la division entre 24
